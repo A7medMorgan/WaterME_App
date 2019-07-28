@@ -56,6 +56,19 @@ public class DataBase extends SQLiteOpenHelper {
         return cursor;
 
     }
+    public boolean check_DB()
+    {
+        ProfileDB=getReadableDatabase();
+        String [] row_details={"name" , "email"};
+        Cursor cursor=ProfileDB.query("sign_up",row_details,null,null,null,null,null);
+        if(cursor!=null)
+        {
+            return true;
+        }
+        ProfileDB.close();
+        return false;
+    }
+
 
 
 }

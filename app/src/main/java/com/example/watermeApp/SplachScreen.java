@@ -10,6 +10,7 @@ public class SplachScreen extends AppCompatActivity {
 
     Handler handler =new Handler();
     Runnable runnable ;
+    DataBase DB = new DataBase(this);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,8 +30,15 @@ public class SplachScreen extends AppCompatActivity {
         runnable = new Runnable() {
             @Override
             public void run() {
-                SplachScreen.this.startActivity(new Intent(
-                        SplachScreen.this , App_Intro.class));
+                if(DB.check_DB() == false) {
+                    SplachScreen.this.startActivity(new Intent(
+                            SplachScreen.this, App_Intro.class));
+                }
+                else
+                {
+                    SplachScreen.this.startActivity(new Intent(
+                            SplachScreen.this , WaterME.class));
+                }
                 finish();
             }
         };
