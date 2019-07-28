@@ -14,17 +14,17 @@
 
         <Button
             android:id="@+id/Home"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
             android:layout_weight="1"
-            android:text="Home" />
+            android:background="@drawable/home" />
 
         <Button
             android:id="@+id/History"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
             android:layout_weight="1"
-            android:text="History" />
+            android:background="@drawable/history" />
     </LinearLayout>
 
     <fragment
