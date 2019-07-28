@@ -9,10 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FinishSignUP"></activity>
+        <activity android:name=".WaterME"></activity>
+        <activity android:name=".FinishSignUP" />
         <activity android:name=".SignUP" />
-        <activity android:name=".App_Intro" />
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".App_Intro"
+            android:theme="@style/NoTitleBar" />
+        <activity
+            android:name=".SplachScreen"
+            android:theme="@style/NoTitleBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -12,14 +12,16 @@ public class App_Intro extends AppCompatActivity {
 
     private static  ImageView view;
     private static  Button next;
+
     public int selectedImage=0;
-    int [] list = {R.drawable.screen2 ,R.drawable.screen3};
+     int [] list = {R.drawable.screen2 ,R.drawable.screen3};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_app__intro);
+
         view=(ImageView)findViewById(R.id.view);
-      next=(Button)findViewById(R.id.next_B);
+        next=(Button)findViewById(R.id.next_B);
 
       next.setOnClickListener(new View.OnClickListener() {
     @Override
@@ -29,7 +31,6 @@ public class App_Intro extends AppCompatActivity {
 });
 
     }
-
     void setImage()
     {
         if(selectedImage==2)

@@ -6,14 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-public class MainActivity extends AppCompatActivity {
+public class SplachScreen extends AppCompatActivity {
 
     Handler handler =new Handler();
     Runnable runnable ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_splach_screen);
 
         // start splach sceen
         creat_SplachScree();
@@ -29,8 +29,8 @@ public class MainActivity extends AppCompatActivity {
         runnable = new Runnable() {
             @Override
             public void run() {
-                MainActivity.this.startActivity(new Intent(
-                        MainActivity.this , App_Intro.class));
+                SplachScreen.this.startActivity(new Intent(
+                        SplachScreen.this , App_Intro.class));
                 finish();
             }
         };
